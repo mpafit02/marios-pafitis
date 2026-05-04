@@ -570,7 +570,6 @@ function Recognition() {
     { ev: "EU-Startups Summit", yr: "'23", loc: "Barcelona" },
     { ev: "Athenian Nexus SFF Summit", yr: "'24" },
     { ev: "Gen-E", yr: "'23", loc: "Istanbul" },
-    { ev: "AmCham EU Youth Awards", yr: "'23", loc: "Brussels" },
     { ev: "MIT 25th Global Startup Workshop", yr: "'23", loc: "Athens" },
   ];
   return (

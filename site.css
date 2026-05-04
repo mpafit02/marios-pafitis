@@ -647,7 +647,7 @@ a {
 /* Scroll cue */
 .scroll-cue {
   position: absolute;
-  bottom: 24px;
+  bottom: 48px;
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--mono);
@@ -2357,6 +2357,8 @@ section.chapter {
 }
 
 /* Keep red for: hover states, scroll progress, cursor dot, nav vital dot, eyebrow dot, forbes badge */
+
+#recognition { padding-top: 100px; }
 /* ─── Mobile responsive fixes ────────────────────────────────────── */
 @media (max-width: 720px) {
   /* Kill horizontal overflow globally */
