@@ -208,7 +208,7 @@ a {
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 8px var(--accent);
-  animation: heartbeat 1.2s ease-in-out infinite;
+  animation: heartbeat 2.4s ease-in-out infinite;
 }
 
 .nav-mark .nm-vital .nm-ecg {
@@ -2071,16 +2071,16 @@ section.chapter {
 
 /* Hero status dot now beats */
 .eyebrow .dot {
-  animation: heartbeat 1.2s ease-in-out infinite;
+  animation: heartbeat 2.4s ease-in-out infinite;
 }
 
 /* Forbes seal beats subtly */
 .forbes-badge .seal {
-  animation: heartbeat-glow 1.2s ease-in-out infinite;
+  animation: heartbeat-glow 2.4s ease-in-out infinite;
 }
 
 .forbes-badge .seal-inner .num {
-  animation: heartbeat 1.2s ease-in-out infinite;
+  animation: heartbeat 2.4s ease-in-out infinite;
   transform-origin: center;
 }
 
@@ -2104,12 +2104,12 @@ section.chapter {
 
 /* Marquee separators beat */
 .marquee-track .sep {
-  animation: heartbeat 1.2s ease-in-out infinite;
+  animation: heartbeat 2.4s ease-in-out infinite;
 }
 
 /* Recognition list bullets pulse on hover */
 .recog li:hover::before {
-  animation: heartbeat-glow 1.2s ease-in-out infinite;
+  animation: heartbeat-glow 2.4s ease-in-out infinite;
 }
 
 /* Ventures: live aurora */
