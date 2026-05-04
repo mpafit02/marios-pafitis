@@ -78,6 +78,7 @@ function useParallax(ref, strength = 12) {
     const el = ref.current;
     if (!el) return;
     const onMove = (e) => {
+      if (window.innerWidth <= 720) return;
       const cx = window.innerWidth / 2;
       const cy = window.innerHeight / 2;
       const x = (e.clientX - cx) / cx * strength;
