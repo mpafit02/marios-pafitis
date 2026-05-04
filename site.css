@@ -2426,3 +2426,53 @@ section.chapter {
   /* Forbes sparks hide on mobile — too heavy */
   .forbes-spark { display: none; }
 }
+
+/* ─── Burger menu ─────────────────────────────────────────────────── */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px; height: 32px;
+  background: none; border: none;
+  cursor: pointer; padding: 0;
+  z-index: 200;
+}
+.bline {
+  display: block;
+  width: 22px; height: 1.5px;
+  background: var(--ink);
+  transition: transform .3s ease, opacity .3s ease;
+  transform-origin: center;
+}
+.bline.open:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.bline.open:nth-child(2) { opacity: 0; }
+.bline.open:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(10,3,6,0.97);
+  backdrop-filter: blur(12px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.mobile-menu a {
+  font-family: var(--serif);
+  font-size: clamp(32px, 8vw, 52px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  transition: color .2s;
+}
+.mobile-menu a:hover { color: var(--accent-3); }
+
+@media (max-width: 720px) {
+  .burger { display: flex; }
+  .mobile-menu { display: flex; }
+}

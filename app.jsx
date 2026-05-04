@@ -200,6 +200,7 @@ function RippleText({ children, className = "", as: Tag = "span" }) {
 /* Nav */
 function Nav({ bpm }) {
   const ref = useRef(null);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     let off = 0;
     let raf;
@@ -214,26 +215,43 @@ function Nav({ bpm }) {
     raf = requestAnimationFrame(draw);
     return () => cancelAnimationFrame(raf);
   }, []);
+  const close = () => setOpen(false);
   return (
-    <nav className="nav">
-      <div className="nav-mark">
-        <span>Marios&nbsp;Pafitis</span>
-        <span className="nm-vital" aria-hidden="true">
-          <span className="nm-dot"></span>
-          <svg className="nm-ecg" viewBox="0 0 70 16" preserveAspectRatio="none">
-            <path ref={ref} d="" />
-          </svg>
-          <span className="nm-bpm"><em>{bpm}</em> bpm</span>
-        </span>
-      </div>
-      <div className="nav-links">
-        <a href="#story">Story</a>
-        <a href="#mammocheck">MammoCheck</a>
-        <a href="#ventures">Ventures</a>
-        <a href="#research">Research</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+    <>
+      <nav className="nav">
+        <div className="nav-mark">
+          <span>Marios&nbsp;Pafitis</span>
+          <span className="nm-vital" aria-hidden="true">
+            <span className="nm-dot"></span>
+            <svg className="nm-ecg" viewBox="0 0 70 16" preserveAspectRatio="none">
+              <path ref={ref} d="" />
+            </svg>
+            <span className="nm-bpm"><em>{bpm}</em> bpm</span>
+          </span>
+        </div>
+        <div className="nav-links">
+          <a href="#story">Story</a>
+          <a href="#mammocheck">MammoCheck</a>
+          <a href="#ventures">Ventures</a>
+          <a href="#research">Research</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button className="burger" onClick={() => setOpen(o => !o)} aria-label="Menu">
+          <span className={open ? "bline open" : "bline"}></span>
+          <span className={open ? "bline open" : "bline"}></span>
+          <span className={open ? "bline open" : "bline"}></span>
+        </button>
+      </nav>
+      {open && (
+        <div className="mobile-menu">
+          <a href="#story" onClick={close}>Story</a>
+          <a href="#mammocheck" onClick={close}>MammoCheck</a>
+          <a href="#ventures" onClick={close}>Ventures</a>
+          <a href="#research" onClick={close}>Research</a>
+          <a href="#contact" onClick={close}>Contact</a>
+        </div>
+      )}
+    </>
   );
 }
 
