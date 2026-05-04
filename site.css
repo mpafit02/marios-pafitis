@@ -2387,7 +2387,7 @@ section.chapter {
   /* Tickers 2 cols */
   .hero-tickers { grid-template-columns: repeat(2, 1fr); margin-top: 32px; padding-bottom: 32px; }
   .tick-v em { display: block; }
-  .scroll-cue { bottom: 120px; }
+  .scroll-cue { display: none; }
 
   /* Story body single col */
   .story-body { grid-template-columns: 1fr; gap: 18px; }
