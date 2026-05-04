@@ -2358,7 +2358,7 @@ section.chapter {
 
 /* Keep red for: hover states, scroll progress, cursor dot, nav vital dot, eyebrow dot, forbes badge */
 
-#recognition { padding-top: 100px; }
+#recognition { padding-top: 60px; }
 /* ─── Mobile responsive fixes ────────────────────────────────────── */
 @media (max-width: 720px) {
   /* Kill horizontal overflow globally */
