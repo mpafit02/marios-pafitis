@@ -2510,3 +2510,13 @@ section.chapter {
   .burger { display: flex; }
   .mobile-menu { display: flex; }
 }
+
+/* MammoCheck logo in chapter title */
+.mc-logo-link { display: inline-block; vertical-align: middle; }
+.mc-logo {
+  height: 0.9em;
+  width: auto;
+  vertical-align: middle;
+  transition: opacity .25s;
+}
+.mc-logo-link:hover .mc-logo { opacity: 0.8; }
