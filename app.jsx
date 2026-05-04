@@ -422,7 +422,7 @@ function MammoCheck() {
       <div className="mc-inner">
         <div className="chapter-head reveal">
           <div className="chapter-no"><span className="num">ii.</span><RippleText>Current Chapter</RippleText></div>
-          <h2 className="chapter-title"><a href="https://mammocheck.co" target="_blank" rel="noopener" className="mc-logo-link"><img src="assets/mammocheck_logo.svg" alt="MammoCheck" className="mc-logo" /></a> — <em>at-home screening,</em><br />between mammograms.</h2>
+          <h2 className="chapter-title"><a href="https://mammocheck.co" target="_blank" rel="noopener" className="mc-logo-link"><img src="assets/mammocheck_logo.svg" alt="MammoCheck" className="mc-logo" /></a> <em>at-home screening,</em><br />between mammograms.</h2>
         </div>
 
         <div className="mc-grid">

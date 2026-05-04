@@ -2514,7 +2514,7 @@ section.chapter {
 /* MammoCheck logo in chapter title */
 .mc-logo-link { display: inline-block; vertical-align: middle; }
 .mc-logo {
-  height: 0.9em;
+  height: 1.4em;
   width: auto;
   vertical-align: middle;
   transition: opacity .25s;
