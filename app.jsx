@@ -266,7 +266,7 @@ function Hero() {
             <WordReveal text="worth solving." baseDelay={300} italic={true} />
           </h1>
           <p className="hero-sub reveal d2">
-            Cypriot computer scientist and founder. <em>Co-Founder &amp; CTO of MammoCheck</em> — turning research into products for human health and societal impact.
+            Cypriot computer scientist and founder.<br /><em>Co-Founder &amp; CTO of MammoCheck</em><br /> — turning research into products for human health and societal impact.
           </p>
         </div>
 
@@ -280,7 +280,7 @@ function Hero() {
             <div className="tick-v">At-home <em>screening</em></div>
           </div>
           <div className="tick">
-            <div className="tick-k">Trial</div>
+            <div className="tick-k">Clinical Trials</div>
             <div className="tick-v">Active in <em>hospitals</em></div>
           </div>
           <div className="tick">
@@ -298,30 +298,56 @@ function Hero() {
   );
 }
 
-/* Forbes badge — circular seal with rotating rim text */
+/* Forbes badge — official logo */
 function ForbesBadge() {
-  // const rim = "FORBES 30 UNDER 30 · GREEK LIST 2026";
+  const DUR = 6;
+  const sparks = Array.from({ length: 8 }).map((_, i) => ({
+    angle: (i / 8) * 360,
+    dist: 60 + (i % 3) * 14,
+    dur: DUR + (i % 3) * 0.8,
+    delay: -(i / 8) * DUR,
+    size: 2 + (i % 2),
+  }));
+  return (
+    <a
+      href="https://www.forbesgreece.gr/forbes-30-under-30-2026/3955090/h-mammocheck-kainotomei-sti-maxi-kata-tou-karkinou-tou-mastou?_gl=1*13mrras*_ga*MTM4NTg3MjQyMy4xNzc3ODgwODQ3*_ga_KWY82MK1WH*czE3Nzc4ODA4NDYkbzEkZzAkdDE3Nzc4ODA4NDYkajYwJGwwJGgw"
+      target="_blank"
+      rel="noopener"
+      className="forbes-badge reveal d3"
+    >
+      <div className="forbes-aura">
+        {sparks.map((s, i) => (
+          <span key={i} className="forbes-spark" style={{
+            "--angle": s.angle + "deg",
+            "--dist": s.dist + "px",
+            width: s.size + "px",
+            height: s.size + "px",
+            animationDuration: s.dur + "s",
+            animationDelay: s.delay + "s",
+          }} />
+        ))}
+        <img src="assets/30-under-30-1-removebg-preview.png" alt="Forbes 30 Under 30 · Greek List 2026" className="forbes-logo" />
+      </div>
+    </a>
+  );
+  /* Seal commented out — replaced with official logo
   return (
     <div className="forbes-badge reveal d3">
       <div className="seal">
         <svg className="seal-rim" viewBox="0 0 200 200">
           <defs>
-            {/* arc along the BOTTOM of the seal, left → right */}
             <path id="rim-path" d="M 8,100 a 92,92 0 0,0 184,0" />
           </defs>
-          {/* <text>
-            <textPath href="#rim-path" startOffset="50%" textAnchor="middle">
-              {rim}
-            </textPath>
-          </text> */}
         </svg>
         <div className="seal-inner">
           <div className="num">30/30</div>
           <div className="lbl">Greek List</div>
         </div>
       </div>
+      <div className="meta">Forbes 30 Under 30<br />Greek List 2026</div>
     </div>
   );
+  */
 }
 
 /* Story */
@@ -344,6 +370,9 @@ function Story() {
               He co-founded <em>Fooderloo</em> to fight food waste, scaling it across Cyprus and earning recognition from the World Summit Awards and Mission Innovation.
             </p>
             <p className="reveal d2">
+              Selected as a <em>U.S. Department of State YTILI Fellow</em> (Fall 2024), he represented Cyprus across San Francisco, Silicon Valley, Pittsburgh, Denver, Washington D.C., and New York — engaging investors, founders, and industry leaders.
+            </p>
+            <p className="reveal d3">
               Today, as Co-Founder &amp; CTO of <em>MammoCheck</em>, he leads the engineering and AI behind an at-home breast cancer screening device — currently in clinical trials across hospitals in Cyprus, with a regulatory path toward FDA 510(k) and CE MDR Class IIa.
             </p>
           </div>
@@ -366,13 +395,15 @@ function MammoCheck() {
     { y: "2022–24", t: "Cyprus Seeds graduate", s: "3rd Cycle" },
     { y: "2025", t: "1st place, CyEC", s: "Cyprus Entrepreneurship Competition" },
     { y: "2023", t: "1st place, Startups4Peace", s: "International recognition" },
+    { y: "2023", t: "Rising Star Award", s: "Digital Agenda Alpha Stage AI" },
+    { y: "2023", t: "Microsoft for Startups", s: "Founders Hub · Cyprus Program" },
   ];
   return (
     <section className="mc" id="mammocheck">
       <div className="mc-inner">
         <div className="chapter-head reveal">
           <div className="chapter-no"><span className="num">ii.</span><RippleText>Current Chapter</RippleText></div>
-          <h2 className="chapter-title">MammoCheck — <em>at-home screening,</em><br />between mammograms.</h2>
+          <h2 className="chapter-title"><a href="https://mammocheck.co" target="_blank" rel="noopener">MammoCheck</a> — <em>at-home screening,</em><br />between mammograms.</h2>
         </div>
 
         <div className="mc-grid">
@@ -521,17 +552,17 @@ function Ventures() {
 /* Recognition + Speaking */
 function Recognition() {
   const left = [
-    { y: "2026", t: <><a href="https://www.forbes.gr/forbes-lists/30-under-30-2026/" target="_blank" rel="noopener" className="forbes-inline"><span className="f-mark">F</span><span className="f-txt">Forbes <em>30 Under 30</em></span></a> Greek List</>, s: "List of 2026" },
+    { y: "2026", t: <><a href="https://www.forbesgreece.gr/forbes-30-under-30-2026/3955090/h-mammocheck-kainotomei-sti-maxi-kata-tou-karkinou-tou-mastou?_gl=1*13mrras*_ga*MTM4NTg3MjQyMy4xNzc3ODgwODQ3*_ga_KWY82MK1WH*czE3Nzc4ODA4NDYkbzEkZzAkdDE3Nzc4ODA4NDYkajYwJGwwJGgw" target="_blank" rel="noopener" className="forbes-inline"><span className="f-mark">F</span><span className="f-txt">Forbes <em>30 Under 30</em></span></a> Greek List</>, s: "List of 2026" },
     { y: "2024", t: <>U.S. Department of State <em>YTILI Fellow</em></>, s: "Pittsburgh placement" },
     { y: "2025–27", t: "YTILI Alumni Board Member", s: "" },
     { y: "2025", t: "Startup World Cup Mentor", s: "" },
     { y: "2025", t: "Young Innovation & Entrepreneurship Award", s: "Research category" },
   ];
   const right = [
-    { y: "—", t: "Michael Frederickou Award", s: "Outstanding Student" },
-    { y: "—", t: "100% scholarship, MSc Web & Smart Systems", s: "" },
-    { y: "2020", t: "1st place, StudentLife Awards", s: "Most Active University Student" },
-    { y: "—", t: "Reviewer, Neural Computing & Applications", s: "" },
+    { y: "2022", t: "Michael Frederickou Award", s: "Outstanding Student or Graduate" },
+    { y: "2021", t: "100% scholarship, MSc Web & Smart Systems", s: "Frederick University of Cyprus" },
+    { y: "2021", t: "1st place, StudentLife Awards", s: "Most Active University Student" },
+    { y: "2021–", t: "Reviewer, Neural Computing & Applications", s: "Springer · ongoing" },
   ];
   const speaking = [
     { ev: "SLUSH", yr: "'23, '24", loc: "Helsinki" },
@@ -606,7 +637,7 @@ function Research() {
             <div className="cite">
               <span className="authors">Pafitis, M., Constantinou, C., Christodoulou, C.</span>
               {" "}
-              <em>Accelerating training of convolutional neural networks with Hessian-free optimization for detecting Alzheimer's disease in brain MRI.</em>
+              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10736607" target="_blank" rel="noopener"><em>Accelerating training of convolutional neural networks with Hessian-free optimization for detecting Alzheimer's disease in brain MRI.</em></a>
               <span className="venue">IEEE Access · 2024</span>
             </div>
           </li>
@@ -614,8 +645,8 @@ function Research() {
             <div className="cite">
               <span className="authors">Pafitis, M., et al.</span>
               {" "}
-              <em>MELETI: A Machine-Learning-Based Embedded System Architecture for Infrastructure Inspection with UAVs.</em>
-              <span className="venue">Conference Proceedings · 2023</span>
+              <a href="https://www.researchgate.net/publication/374531415_MELETI_A_Machine-Learning-Based_Embedded_System_Architecture_for_Infrastructure_Inspection_with_UAVs" target="_blank" rel="noopener"><em>MELETI: A Machine-Learning-Based Embedded System Architecture for Infrastructure Inspection with UAVs.</em></a>
+              <span className="venue">Embedded Machine Learning for Cyber-Physical, IoT, and Edge Computing · 2023</span>
             </div>
           </li>
           <li className="reveal d2">
@@ -664,12 +695,12 @@ function EduCraft() {
           <div className="col reveal d1">
             <h3>Craft</h3>
             <div className="craft-list">
-              {["TypeScript", "PHP", "Python", "Java", "React", "Node", "Laravel", "Django", "Flutter", "Machine Learning", "Computer Vision", "GCP", "Hetzner", "LLMs & RAG"].map((t, i) => (
+              {["TypeScript", "PHP", "Python", "Java", "C", "React", "Angular", "Vue.js", "Node", "Laravel", "Django", "Flutter", "Machine Learning", "Computer Vision", "Docker", "LLMs & RAG"].map((t, i) => (
                 <span className="item" key={i}>{t}</span>
               ))}
             </div>
             <div className="lang">
-              <strong>Languages.</strong> Greek (native) · English (IELTS 8.0)
+              <strong>Languages.</strong> Greek (native) · English (IELTS 8.5)
             </div>
           </div>
         </div>
@@ -716,6 +747,10 @@ function Contact() {
             <a className="c-v" href="https://github.com/mpafit02" target="_blank" rel="noopener">mpafit02</a>
           </div>
           <div className="reveal d2">
+            <div className="c-k">Email</div>
+            <a className="c-v" href="mailto:mariospafitis1998@gmail.com">mariospafitis1998@gmail.com</a>
+          </div>
+          <div className="reveal d3">
             <div className="c-k">Located</div>
             <span className="c-v">Nicosia, Cyprus</span>
           </div>
