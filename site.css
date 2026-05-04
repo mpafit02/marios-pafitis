@@ -370,7 +370,12 @@ a {
 
 @media (max-width: 720px) {
   .hero-inner {
-    padding: 240px 24px 64px;
+    padding: 80px 24px 64px;
+    justify-content: flex-start;
+    gap: 32px;
+  }
+  .hero-meta {
+    margin-top: 20px;
   }
 }
 
@@ -2427,6 +2432,7 @@ section.chapter {
 
   /* Forbes sparks hide on mobile — too heavy */
   .forbes-spark { display: none; }
+  .forbes-badge { display: none; }
   .recog li { pointer-events: none; }
   .recog li:hover { padding-left: 0; }
   .recog li:hover::before { width: 0; }
