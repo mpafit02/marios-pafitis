@@ -2511,12 +2511,15 @@ section.chapter {
   .mobile-menu { display: flex; }
 }
 
-/* MammoCheck logo in chapter title */
-.mc-logo-link { display: inline-block; vertical-align: middle; }
-.mc-logo {
-  height: 1.4em;
+/* MammoCheck logo on device visual */
+.mc-device-logo {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 22px;
   width: auto;
-  vertical-align: middle;
-  transition: opacity .25s;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.6));
+  z-index: 2;
 }
-.mc-logo-link:hover .mc-logo { opacity: 0.8; }
