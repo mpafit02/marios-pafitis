@@ -2356,3 +2356,68 @@ section.chapter {
 }
 
 /* Keep red for: hover states, scroll progress, cursor dot, nav vital dot, eyebrow dot, forbes badge */
+/* ─── Mobile responsive fixes ────────────────────────────────────── */
+@media (max-width: 720px) {
+  /* Kill horizontal overflow globally */
+  html, body { overflow-x: hidden; }
+
+  /* Section breathing room — reduce on mobile */
+  section.chapter { padding: 80px 0; }
+  .mc { padding: 80px 24px; }
+  .note { padding: 80px 0; }
+  .contact { padding: 80px 0 60px; }
+  .chapter-head { margin-bottom: 48px; }
+
+  /* Forbes badge — flow inline, not absolute */
+  .forbes-badge {
+    position: relative;
+    top: auto; left: auto;
+    width: 100%;
+    margin: 24px 0;
+  }
+  .forbes-logo { width: 200px; }
+
+  /* Hero headline full width */
+  .hero-headline { max-width: 100%; text-align: left; }
+  .hero-sub { margin-left: 0; font-size: 18px; }
+
+  /* Tickers 2 cols */
+  .hero-tickers { grid-template-columns: repeat(2, 1fr); margin-top: 32px; padding-bottom: 32px; }
+
+  /* Story body single col */
+  .story-body { grid-template-columns: 1fr; gap: 18px; }
+
+  /* MammoCheck grid single col */
+  .mc-grid { grid-template-columns: 1fr; gap: 32px; }
+  .mc-inner { padding: 0 24px; }
+  .mc-creds-grid { grid-template-columns: 1fr; }
+
+  /* Ventures single col */
+  .ventures { grid-template-columns: 1fr; }
+  .venture { min-height: auto; }
+
+  /* Recognition single col */
+  .recog-grid { grid-template-columns: 1fr; gap: 32px; }
+
+  /* Research list */
+  .research-list li { grid-template-columns: 44px 1fr; gap: 12px; }
+
+  /* Education split single col */
+  .split { grid-template-columns: 1fr; gap: 32px; }
+
+  /* Contact grid 1 col */
+  .contact-grid { grid-template-columns: 1fr; gap: 18px; }
+  .contact h2 { font-size: clamp(36px, 10vw, 64px); }
+
+  /* Chapter head single col */
+  .chapter-head { grid-template-columns: 1fr; gap: 12px; }
+
+  /* Note inner single col */
+  .note-inner { grid-template-columns: 1fr; gap: 24px; }
+
+  /* Wrap padding */
+  .wrap { padding: 0 20px; }
+
+  /* Forbes sparks hide on mobile — too heavy */
+  .forbes-spark { display: none; }
+}
