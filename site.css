@@ -374,15 +374,7 @@ a {
     justify-content: flex-start;
     gap: 32px;
   }
-  .hero-meta {
-    margin-top: 20px;
-    opacity: 1 !important;
-    transform: none !important;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .hero-meta .loc { font-size: 10px; }
+  .hero-meta { display: none; }
 }
 
 .hero-meta {
