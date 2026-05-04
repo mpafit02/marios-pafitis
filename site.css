@@ -2427,6 +2427,9 @@ section.chapter {
 
   /* Forbes sparks hide on mobile — too heavy */
   .forbes-spark { display: none; }
+  .recog li { pointer-events: none; }
+  .recog li:hover { padding-left: 0; }
+  .recog li:hover::before { width: 0; }
 }
 
 /* ─── Burger menu ─────────────────────────────────────────────────── */
