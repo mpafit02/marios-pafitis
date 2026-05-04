@@ -605,7 +605,7 @@ a {
 .hero-tickers {
   margin-top: 56px;
   padding-top: 22px;
-  padding-bottom: 56px;
+  padding-bottom: 100px;
   border-top: 1px solid var(--rule);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2384,6 +2384,7 @@ section.chapter {
 
   /* Tickers 2 cols */
   .hero-tickers { grid-template-columns: repeat(2, 1fr); margin-top: 32px; padding-bottom: 32px; }
+  .tick-v em { display: block; }
 
   /* Story body single col */
   .story-body { grid-template-columns: 1fr; gap: 18px; }
