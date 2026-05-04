@@ -2388,6 +2388,8 @@ section.chapter {
   .hero-tickers { grid-template-columns: repeat(2, 1fr); margin-top: 32px; padding-bottom: 32px; }
   .tick-v em { display: block; }
   .scroll-cue { display: none; }
+  .hero-bg img { animation: none; transform: scale(1.18); }
+  .hero-bg { background-attachment: scroll; }
 
   /* Story body single col */
   .story-body { grid-template-columns: 1fr; gap: 18px; }
