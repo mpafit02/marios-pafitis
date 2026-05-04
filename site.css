@@ -824,8 +824,9 @@ section.chapter {
     radial-gradient(ellipse at 80% 20%, rgba(122, 28, 42, 0.45), transparent 60%),
     radial-gradient(ellipse at 10% 80%, rgba(192, 57, 43, 0.18), transparent 55%),
     var(--bg-3);
-  margin: 0 -100vw;
-  padding: 140px 100vw;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 140px 0;
   position: relative;
   overflow: hidden;
 }
@@ -859,7 +860,7 @@ section.chapter {
   }
 
   .mc {
-    padding: 80px 100vw;
+    padding: 80px 0;
   }
 }
 
@@ -2291,7 +2292,7 @@ section.chapter {
 }
 
 .mc {
-  padding: 180px 100vw;
+  padding: 180px 0;
 }
 
 .note {
@@ -2363,7 +2364,7 @@ section.chapter {
 
   /* Section breathing room — reduce on mobile */
   section.chapter { padding: 80px 0; }
-  .mc { padding: 80px 24px; }
+  .mc { padding: 80px 0; }
   .note { padding: 80px 0; }
   .contact { padding: 80px 0 60px; }
   .chapter-head { margin-bottom: 48px; }
