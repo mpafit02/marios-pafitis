@@ -300,7 +300,7 @@ function Hero() {
 
 /* Forbes badge — circular seal with rotating rim text */
 function ForbesBadge() {
-  const rim = "FORBES 30 UNDER 30 · GREEK LIST 2026";
+  // const rim = "FORBES 30 UNDER 30 · GREEK LIST 2026";
   return (
     <div className="forbes-badge reveal d3">
       <div className="seal">
@@ -309,11 +309,11 @@ function ForbesBadge() {
             {/* arc along the BOTTOM of the seal, left → right */}
             <path id="rim-path" d="M 8,100 a 92,92 0 0,0 184,0" />
           </defs>
-          <text>
+          {/* <text>
             <textPath href="#rim-path" startOffset="50%" textAnchor="middle">
               {rim}
             </textPath>
-          </text>
+          </text> */}
         </svg>
         <div className="seal-inner">
           <div className="num">30/30</div>
