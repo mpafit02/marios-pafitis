@@ -765,10 +765,6 @@ function Contact() {
             <a className="c-v" href="https://github.com/mpafit02" target="_blank" rel="noopener">mpafit02</a>
           </div>
           <div className="reveal d2">
-            <div className="c-k">Email</div>
-            <a className="c-v" href="mailto:mariospafitis1998@gmail.com">mariospafitis1998@gmail.com</a>
-          </div>
-          <div className="reveal d3">
             <div className="c-k">Located</div>
             <span className="c-v">Nicosia, Cyprus</span>
           </div>
