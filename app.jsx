@@ -263,7 +263,7 @@ function Hero() {
   return (
     <header className="hero" id="top">
       <div className="hero-bg" ref={bgRef} style={{ transform: "translate(var(--px,0), var(--py,0))" }}>
-        <img src="assets/portrait.jpg" alt="" aria-hidden="true" />
+        <img src="assets/portrait.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
       </div>
       <div className="hero-noise"></div>
       <Particles count={18} />
@@ -345,28 +345,10 @@ function ForbesBadge() {
             animationDelay: s.delay + "s",
           }} />
         ))}
-        <img src="assets/30-under-30-1-removebg-preview.png" alt="Forbes 30 Under 30 · Greek List 2026" className="forbes-logo" />
+        <img src="assets/30-under-30-1-removebg-preview.png" alt="Forbes 30 Under 30 · Greek List 2026" className="forbes-logo" loading="lazy" decoding="async" />
       </div>
     </a>
   );
-  /* Seal commented out — replaced with official logo
-  return (
-    <div className="forbes-badge reveal d3">
-      <div className="seal">
-        <svg className="seal-rim" viewBox="0 0 200 200">
-          <defs>
-            <path id="rim-path" d="M 8,100 a 92,92 0 0,0 184,0" />
-          </defs>
-        </svg>
-        <div className="seal-inner">
-          <div className="num">30/30</div>
-          <div className="lbl">Greek List</div>
-        </div>
-      </div>
-      <div className="meta">Forbes 30 Under 30<br />Greek List 2026</div>
-    </div>
-  );
-  */
 }
 
 /* Story */
@@ -822,7 +804,6 @@ function App() {
     <>
       <Cursor />
       <ScrollProgress />
-      <Vitals />
       <Nav bpm={bpm} />
       <Hero />
       <Story />

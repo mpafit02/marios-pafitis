@@ -507,84 +507,6 @@ a {
   100% { transform: rotate(calc(var(--angle) + 360deg)) translateX(var(--dist)); opacity: 0.05; }
 }
 
-.forbes-badge .seal {
-  position: relative;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 1px solid var(--accent);
-  background: radial-gradient(circle at 50% 40%, rgba(192, 57, 43, 0.28), rgba(10, 3, 6, 0.65));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  box-shadow: 0 0 40px rgba(192, 57, 43, 0.32);
-}
-
-.forbes-badge .seal:hover {
-  animation-play-state: paused;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.forbes-badge .seal-inner {
-  position: absolute;
-  inset: 12px;
-  border-radius: 50%;
-  border: 1px dashed rgba(245, 235, 227, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.forbes-badge .seal-inner .num {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 300;
-  font-size: 36px;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  line-height: 1;
-}
-
-.forbes-badge .seal-inner .lbl {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent-3);
-  margin-top: 4px;
-}
-
-.forbes-badge .seal-rim {
-  position: absolute;
-  inset: -28px;
-  pointer-events: none;
-}
-
-.forbes-badge .seal-rim text {
-  font-family: var(--mono);
-  font-size: 8.5px;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  fill: var(--accent-3);
-}
-
-.forbes-badge .meta {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  text-align: center;
-  line-height: 1.5;
-}
-
 @media (max-width: 900px) {
   .forbes-badge {
     position: relative;
@@ -593,15 +515,6 @@ a {
     width: auto;
     align-items: center;
     margin: 24px 0;
-  }
-
-  .forbes-badge .seal {
-    width: 100px;
-    height: 100px;
-  }
-
-  .forbes-badge .seal-inner .num {
-    font-size: 28px;
   }
 }
 
@@ -2037,55 +1950,9 @@ section.chapter {
   display: none !important;
 }
 
-.vital .ecg {
-  width: 140px;
-  height: 22px;
-  display: block;
-}
-
-.vital .ecg path {
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  filter: drop-shadow(0 0 4px var(--accent-glow));
-}
-
-.vital .bpm {
-  color: var(--accent-3);
-  font-weight: 500;
-  letter-spacing: 0.1em;
-}
-
-.vital .bpm em {
-  color: var(--ink);
-  font-style: normal;
-  font-variant-numeric: tabular-nums;
-  display: inline-block;
-  min-width: 22px;
-  animation: blink 2s ease infinite;
-}
-
-@media (max-width: 900px) {
-  .vital {
-    display: none;
-  }
-}
-
 /* Hero status dot now beats */
 .eyebrow .dot {
   animation: heartbeat 4.8s ease-in-out infinite;
-}
-
-/* Forbes seal beats subtly */
-.forbes-badge .seal {
-  animation: heartbeat-glow 4.8s ease-in-out infinite;
-}
-
-.forbes-badge .seal-inner .num {
-  animation: heartbeat 4.8s ease-in-out infinite;
-  transform-origin: center;
 }
 
 /* MammoCheck device — no heartbeat */
@@ -2522,4 +2389,23 @@ section.chapter {
   opacity: 0.85;
   filter: drop-shadow(0 0 8px rgba(0,0,0,0.6));
   z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero-bg img {
+    animation: none;
+    transform: scale(1.18);
+  }
+
+  .particles {
+    display: none;
+  }
 }
