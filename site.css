@@ -208,7 +208,7 @@ a {
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 8px var(--accent);
-  animation: heartbeat 4.8s ease-in-out infinite;
+  animation: heartbeat 7s ease-in-out infinite;
 }
 
 .nav-mark .nm-vital .nm-ecg {
@@ -1967,15 +1967,15 @@ section.chapter {
   }
 
   10% {
-    transform: scale(1.07);
+    transform: scale(1.035);
   }
 
   20% {
-    transform: scale(0.99);
+    transform: scale(0.995);
   }
 
   30% {
-    transform: scale(1.04);
+    transform: scale(1.02);
   }
 
   40% {

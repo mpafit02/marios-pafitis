@@ -206,7 +206,7 @@ function Nav({ bpm }) {
     let off = 0;
     let raf;
     const draw = () => {
-      off = (off + 1.2) % 70;
+      off = (off + 0.5) % 70;
       if (ref.current) {
         const seg = (x0) => `M ${x0} 8 L ${x0 + 6} 8 L ${x0 + 9} 8 L ${x0 + 11} 3 L ${x0 + 13} 13 L ${x0 + 15} 4 L ${x0 + 17} 8 L ${x0 + 29} 8 L ${x0 + 31} 7 L ${x0 + 33} 9 L ${x0 + 35} 8 L ${x0 + 70} 8`;
         ref.current.setAttribute("d", seg(-off) + " " + seg(70 - off));
